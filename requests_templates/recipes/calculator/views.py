@@ -28,3 +28,32 @@ DATA = {
 #     'ингредиент2': количество2,
 #   }
 # }
+
+def servering_handler(delicion, servings):
+    context = {'recipe': dict()}
+
+    if servings is not None:
+        for key, value in DATA[delicion].items():
+            context['recipe'][key] = round(value * int(servings), 1)
+    else:
+        context = {'recipe': DATA[delicion]}
+
+    return context
+
+def get_omlet(request):
+    servings = request.GET.get('servings')
+    context = servering_handler('omlet', servings)
+
+    return render(request, 'calculator/index.html', context)
+
+def get_pasta(request):
+    servings = request.GET.get('servings')
+    context = servering_handler('pasta', servings)
+
+    return render(request, 'calculator/index.html', context)
+
+def get_buter(request):
+    servings = request.GET.get('servings')
+    context = servering_handler('buter', servings)
+
+    return render(request, 'calculator/index.html', context)

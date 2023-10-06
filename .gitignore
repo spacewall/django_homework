@@ -13,7 +13,7 @@ venv/
 .venv/
 
 ### Project specific ###
-databases/work_with_database/main/.env
+databases/work_with_database/.env
 settings_local.py
 
 ### OS specific ###

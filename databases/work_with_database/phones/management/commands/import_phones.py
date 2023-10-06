@@ -12,6 +12,6 @@ class Command(BaseCommand):
         with open('phones.csv', 'r') as file:
             phones = list(csv.DictReader(file, delimiter=';'))
 
-        for phone in phones:
-            phone['slug'] = phone['name'].replace(' ', '-')
-            Phone(**phone).save()
+            for phone in phones:
+                phone['slug'] = phone['name'].lower().replace(' ', '-')
+                Phone(**phone).save()

@@ -49,6 +49,9 @@ MIDDLEWARE = [
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+config = dotenv_values('.env')
+PASSWORD = config["password"]
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -56,7 +59,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '5432',
         'USER': 'postgres',
-        'PASSWORD': dotenv_values('.env')['DB_PASSWD'],
+        'PASSWORD': PASSWORD,
     }
 }
 

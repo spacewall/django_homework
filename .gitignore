@@ -18,3 +18,4 @@ settings_local.py
 
 ### OS specific ###
 .DS_Store
+databases-2/orm_migrations/.env

@@ -29,7 +29,6 @@ SITE_ID = 1
 
 PASSWORD = dotenv_values('.env')['password']
 
-
 # Application definition
 
 INSTALLED_APPS = [

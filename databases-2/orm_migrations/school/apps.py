@@ -5,4 +5,4 @@ from django.db.models import BigAutoField
 class SchoolConfig(AppConfig):
     name = 'school'
     verbose_name = 'Школа'
-    default_auto_field = 'django.db.models.AutoField'
+    default_auto_field = 'django.db.models.BigAutoField'

@@ -25,6 +25,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+
 SITE_ID = 1
 
 PASSWORD = dotenv_values('.env')['password']
@@ -129,9 +130,3 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-try:
-    from .settings_local import *
-except ImportError:
-    pass
-

@@ -8,14 +8,12 @@ __pycache__/
 *$py.class
 
 *.sqlite3
-env/
 venv/
 .venv/
 
 ### Project specific ###
-databases/work_with_database/.env
+*.env
 settings_local.py
 
 ### OS specific ###
 .DS_Store
-databases-2/orm_migrations/.env

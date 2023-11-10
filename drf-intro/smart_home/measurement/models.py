@@ -9,4 +9,4 @@ class Sensor(models.Model):
 class Measurement(models.Model):
     id = models.BigIntegerField(primary_key=True)
     temperature = models.FloatField()
-    date_time_of_measurment = models.DateTimeField(auto_now_add=True, auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True, auto_now=True)

@@ -1,3 +1,12 @@
 from django.db import models
 
-# TODO: опишите модели датчика (Sensor) и измерения (Measurement)
+
+class Sensor(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.TextField(max_length=100, blank=True)
+
+
+class Measurement(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    temperature = models.FloatField()
+    date_time_of_measurment = models.DateTimeField(auto_now_add=True, auto_now=True)

@@ -86,7 +86,10 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
         'user': '20/minute',
         'anon': '10/minute',
-    }
+    },
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ],
 }
 
 WSGI_APPLICATION = 'api_with_restrictions.wsgi.application'

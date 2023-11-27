@@ -19,6 +19,6 @@ class AdvertisementViewSet(ModelViewSet):
             return [IsAuthenticated()]
         
         elif self.action in ["update", "partial_update", "delete"]:
-            return [IsOwnerOrReadOnly]
+            return [IsOwnerOrReadOnly()]
         
         return []

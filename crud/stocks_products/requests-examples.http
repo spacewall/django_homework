@@ -30,7 +30,7 @@ Content-Type: application/json
 ###
 
 # удаление продукта
-DELETE {{baseUrl}}/products/1/
+DELETE {{baseUrl}}/products/3/
 Content-Type: application/json
 
 ###
